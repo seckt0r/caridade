@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block topo %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">CARIDADE</h1>
+    <p>"Agora, pois, permanecem a fé, a esperança e a caridade, estas três; mas a maior destas é a <b>CARIDADE</b>"</p>
+    <p>Este serviço visa ajudar aos que precisam de ajuda e aos que querem ajudar. Participe neste grande movimento de Caridade, pondo em prática o amor ao próximo.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais &raquo;</a></p>
+  </div>
+</div>
+{% endblock topo %}
+
 {% block conteudo %}
 
 <div class="container">
@@ -19,7 +30,7 @@
       <div class="col-md-4">
         <h2>Quero Participar</h2>
         <p>Para os que estão interessados em dedicar o seu tempo e/ou recursos no transformar esta plataforma cada vez melhor, através dos seus conhecimentos técnicos, sociais, </p>
-        <p><a class="btn btn-secondary" href="#" role="button">Participe &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'colaboradores' %}" role="button">Participe &raquo;</a></p>
       </div>
     </div>
 </div>

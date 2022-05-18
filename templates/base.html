@@ -44,7 +44,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'dashboard' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Blog</a>
@@ -54,7 +54,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">Quero ajudar</a>
           <a class="dropdown-item" href="#">Preciso de ajuda</a>
-          <a class="dropdown-item" href="#">Quero participar</a>
+          <a class="dropdown-item" href="{% url 'colaboradores' %}">Quero participar</a>
         </div>
       </li>
     </ul>
@@ -67,24 +67,18 @@
 
 <main role="main">
 
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">CARIDADE</h1>
-      <p>"Agora, pois, permanecem a fé, a esperança e a caridade, estas três; mas a maior destas é a <b>CARIDADE</b>"</p>
-      <p>Este serviço visa ajudar aos que precisam de ajuda e aos que querem ajudar. Participe neste grande movimento de Caridade, pondo em prática o amor ao próximo.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais &raquo;</a></p>
-    </div>
-  </div>
 
+{% block topo %}
+{% endblock topo %}
 
-    {% block conteudo %}
-    {% endblock conteudo %}
+{% block conteudo %}
+{% endblock conteudo %}
 
 
 </main>
 
 <footer class="container">
-  <p>&copy; Caridade (c)2022</p>
+  <p>&copy; Caridade 2022</p>
 </footer>
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
