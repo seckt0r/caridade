@@ -1,0 +1,15 @@
+runtime: python38
+entrypoint: gunicorn -b :$PORT caridade.wsgi
+
+runtime_config:
+  python_version: 3
+
+beta_settings:
+  cloud_sql_instances: caridade:us-central1:caridade-db
+
+handlers:
+- url: /static
+  static_dir: static/
+
+- url: /.*
+  script: auto
