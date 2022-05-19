@@ -18,19 +18,19 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>Quero Ajudar</h2>
+        <h2>"Quero Ajudar"</h2>
         <p>Para você que quer doar o seu tempo ou recursos em auxílio dos necessitados, este é o local certo para começar. Aqui, poderá saber sobre as diversas formas que pode pôr em prática a sua Caridade, de forma sustentável e segura, garantindo que a alcance o maior número de necessitados de forma que seja realmente benéfico nas suas vidas ao mais longo prazo possível.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Ajude &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'acao:doacao' %}" role="button">Ajude &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Preciso de Ajuda</h2>
+        <h2>"Preciso de Ajuda"</h2>
         <p>Caso precise de ajuda ou conheça alguêm que precise de ajuda, este é o local certo para submeter as informações relevantes para que aqueles que possam ser localizados e contactados por aqueles que estão em condições de prestar o seu auxilio através da Caridade. Elegíveis para este serviço podem ser pessoas particulares ou organizações de várias naturezas. O mais importante é que a ajuda chegue a quem realmente precise.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Seja ajudado &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'acao:solicitacao' %}#" role="button">Seja ajudado &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Quero Participar</h2>
+        <h2>"Quero Participar"</h2>
         <p>Para os que estão interessados em dedicar o seu tempo e/ou recursos no transformar esta plataforma cada vez melhor, através dos seus conhecimentos técnicos, sociais, </p>
-        <p><a class="btn btn-secondary" href="{% url 'colaboradores' %}" role="button">Participe &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'acao:colaboracao' %}" role="button">Participe &raquo;</a></p>
       </div>
     </div>
 </div>

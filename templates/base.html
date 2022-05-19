@@ -5,38 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Benone Marcos e contribuidores">
+    <meta name="author" content="Voluntários">
     <meta name="generator" content="VIM">
     <title>Caridade</title>
-
     <link rel="canonical" href="https://caridade.ao/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="{% static 'css/caridade.css' %}" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Caridade</a>
+  <a class="navbar-brand" href="/">Caridade</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,18 +26,18 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'dashboard' %}">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{% url 'acao:dashboard' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ação</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Quero ajudar</a>
-          <a class="dropdown-item" href="#">Preciso de ajuda</a>
-          <a class="dropdown-item" href="{% url 'colaboradores' %}">Quero participar</a>
+          <a class="dropdown-item" href="{% url 'acao:doacao' %}#">Doadores</a>
+          <a class="dropdown-item" href="{% url 'acao:solicitacao' %}#">Solicitações</a>
+          <a class="dropdown-item" href="{% url 'acao:colaboracao' %}">Colaboradores</a>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blog:blog_list' %}">Blog</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block topo %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">DOAÇÕES</h1>
+    <p>"Agora, pois, permanecem a fé, a esperança e a caridade, estas três; mas a maior destas é a <b>CARIDADE</b>"</p>
+    <p>Existem várias formas de doarmos para a CARIDADE. Podemos doar o nosso tempo, nosso conhecimento, ou bens materiais. Basta dizer qual é a sua disponibilidade que a equipa irá procurar a melhor forma de disponibilizar os seus recursos a quem mais precisa, de forma transparente e sustentável.</p>
+  </div>
+</div>
+{% endblock topo %}
+
+
+{% block conteudo %}
+
+<div class="container">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputNome">Nome</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Nome completo">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputTelefone">Telefone</label>
+        <input type="text" class="form-control" id="inputTelefone" placeholder="Nº de Telefone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputDescricao">Descrição</label>
+      <textarea class="form-control" id="inputDescricao" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+{% endblock conteudo %}
