@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block topo %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">BLOG</h1>
+    <p>"Agora, pois, permanecem a fé, a esperança e a caridade, estas três; mas a maior destas é a <b>CARIDADE</b>"</p>
+    <p>Este serviço visa ajudar aos que precisam de ajuda e aos que querem ajudar. Participe neste grande movimento de Caridade, pondo em prática o amor ao próximo.</p>
+  </div>
+</div>
+{% endblock topo %}
+
+{% block conteudo %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} {{ object.titulo }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ object.autor }} | {{ object.criado_em }}</p>
+        <p class="card-text ">{{ object.conteudo | safe }}</p>
+      </div>
+    </div>
+    {% block sidebar %} {% include 'blog/barra_lateral.html' %} {% endblock sidebar %}
+  </div>
+</div>
+
+{% endblock conteudo %}

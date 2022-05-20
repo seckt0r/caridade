@@ -1,7 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-
-class doacao(models.Model):
+class Doacao(models.Model):
     nome = models.CharField(max_length=100, null=True, blank=True, help_text="Nome completo do doador", verbose_name="Nome completo")
     telefone = models.IntegerField(null=True, blank=True, help_text="Número de telefone do doador. Apenas números", verbose_name="Telefone")
     descricao = models.TextField(null=True, blank=True, help_text="Descrição do tipo de ajuda a disponibilizar", verbose_name="Descrição")
@@ -12,7 +12,7 @@ class doacao(models.Model):
     class Meta:
         verbose_name_plural = "Doações"
 
-class solicitacao(models.Model):
+class Solicitacao(models.Model):
     """
     As informações que serão submetidas para descrever o tipo de ajuda que é necessária e a quem deve ser prestada a ajuda
     
@@ -32,7 +32,7 @@ class solicitacao(models.Model):
     class Meta:
         verbose_name_plural = "Solicitações"
 
-class colaboracao(models.Model):
+class Colaboracao(models.Model):
     """
     As informações dos voluntários
     """

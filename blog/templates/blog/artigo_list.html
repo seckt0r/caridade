@@ -14,13 +14,22 @@
 {% block conteudo %}
 
 <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Artigo 1</h2>
-        <p>Exemplo de um artigo</p>
+  <div class="row">
+      <!-- Blog Entries Column -->
+      <div class="col-md-8 mt-3 left">
+          {% for a in artigo_list %}
+          <div class="card mb-4">
+              <div class="card-body">
+                  <h2 class="card-title">{{ a.titulo }}</h2>
+                  <p class="card-text text-muted h6">{{ a.autor }} | {{ a.criado_em}} </p>
+                  <p class="card-text">{{a.conteudo|slice:":200" }}</p>
+                  <a href="{% url 'blog:blog_detail' a.slug  %}" class="btn btn-primary">Leia mais &rarr;</a>
+              </div>
+          </div>
+          {% endfor %}
       </div>
-    </div>
+      {% block sidebar %} {% include 'blog/barra_lateral.html' %} {% endblock sidebar %}
+  </div>
 </div>
 
 {% endblock conteudo %}
