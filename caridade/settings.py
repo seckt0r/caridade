@@ -81,12 +81,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'caridade.wsgi.application'
 
-DATABASES = {"default": env.db()}
+# DATABASES = {"default": env.db()}
 
 # # If the flag as been set, configure to use proxy
 if os.getenv("USE_CLOUD_SQL_AUTH_PROXY", None):
-    DATABASES["default"]["HOST"] = "127.0.0.1"
-    DATABASES["default"]["PORT"] = 3306
+    # DATABASES["default"]["HOST"] = "127.0.0.1"
+    # DATABASES["default"]["PORT"] = 5432
+    DATABASES = {
+        'default': {
+            'ENGINE': env('DATABASE_ENGINE'),
+            'NAME': env('DATABASE_NAME'),
+            'USER': env('DATABASE_USER'),
+            'PASSWORD': env('DATABASE_PASSWORD'),
+            'HOST': env('DATABASE_HOST'),
+            'PORT': env('DATABASE_PORT'),
+        }
+    }
 
 else:
     DATABASES = {
