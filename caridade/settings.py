@@ -24,7 +24,8 @@ elif os.environ.get("GOOGLE_CLOUD_PROJECT", None):
 else:
     raise Exception("No local .env or GOOGLE_CLOUD_PROJECT detected. No secrets found.")
 
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
+DEBUG = True
 
 SECRET_KEY = env('SECRET_KEY')
 
@@ -41,14 +42,15 @@ else:
     ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
+    'acao',
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'acao',
-    'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -133,9 +135,14 @@ THOUSAND_SEPARATOR = '.'
 USE_THOUSAND_SEPARATOR = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 MEDIA_URL = '/media/'
