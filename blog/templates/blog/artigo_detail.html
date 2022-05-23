@@ -1,29 +1,462 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block topo %}
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-3">BLOG</h1>
-    <p>"Agora, pois, permanecem a fé, a esperança e a caridade, estas três; mas a maior destas é a <b>CARIDADE</b>"</p>
-    <p>Este serviço visa ajudar aos que precisam de ajuda e aos que querem ajudar. Participe neste grande movimento de Caridade, pondo em prática o amor ao próximo.</p>
-  </div>
-</div>
-{% endblock topo %}
-
 {% block conteudo %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <h1>{% block title %} {{ object.titulo }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ object.autor }} | {{ object.criado_em }}</p>
-        <p class="card-text ">{{ object.conteudo | safe }}</p>
+<!-- Page Title -->
+<section class="page-title" style="background-image: url(assets/images/background/12.jpg);">
+  <div class="auto-container">
+      <div class="content-box">
+          <div class="title">
+              <h1>Novidades</h1>
+          </div>
+          <ul class="bread-crumb clearfix">
+              <li><a href="/">Início</a></li>
+              <li>Blog</li>
+              <li>{{ object.titulo }}</li>
+          </ul>
       </div>
-    </div>
-    {% block sidebar %} {% include 'blog/barra_lateral.html' %} {% endblock sidebar %}
   </div>
-</div>
+</section>
+<!-- End Page Title -->
 
+
+<!-- sidebar-page-container -->
+<section class="sidebar-page-container">
+  <div class="auto-container">
+      <div class="row clearfix">
+          <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+              <div class="blog-details-content">
+                  <div class="content-one">
+                      <div class="upper-box">
+                          <span># {{ object.categoria }}</span>
+                          <h2>{{ object.titulo }}</h2>
+                          <ul class="post-info clearfix">
+                              <li><i class="far fa-user"></i>Por {{ object.autor }}</li>
+                              <li><i class="far fa-comment"></i>08 Cmts</li>
+                              <li><i class="far fa-eye"></i>25 Views</li>
+                          </ul>
+                      </div>
+                      <figure class="image-box">
+                          <img src="{{ object.imagem.url }}" alt="">
+                          <span class="post-date">{{ object.criado_em }}</span>
+                      </figure>
+                      <div class="text">
+                          <p>{{ object.conteudo }}</p>
+                          <h3>Different Charity Causes</h3>
+                          <p>When our power of choice is untrammelled and when nothing prevents our being able to dowhat we like best every pleasures  to be welcomed every pain avoided but in certain circumstances and owing to the claims of duty or the obligation.</p>
+                          <h4>01. COVID 19 Relief</h4>
+                          <p>Indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the all moment, so blinded by desire, that they cannot foresee the pain and trouble.</p>
+                          <h4>02. Elderly Care Health</h4>
+                          <p>Untrammelled and when nothing prevents work being able to do what we like best every pleasure is to be  but in certain duty one who avoids a pain that produces.</p>
+                      </div>
+                  </div>
+
+                  <div class="post-share-option clearfix">
+                      <ul class="tags-list pull-left clearfix">
+                          <li><h5>Tags:</h5></li>
+                          <li><a href="blog-details.html">activities</a></li>
+                          <li><a href="blog-details.html">benefits</a></li>
+                          <li><a href="blog-details.html">education</a></li>
+                      </ul>
+                      <ul class="social-links pull-right clearfix">
+                          <li><a href="blog-details.html"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="blog-details.html"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="blog-details.html"><i class="fab fa-linkedin-in"></i></a></li>
+                          <li><a href="blog-details.html"><i class="fab fa-pinterest-p"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="author-box">
+                      <figure class="author-thumb"><img src="{% static 'images/news/author-1.jpg' %}" alt=""></figure>
+                      <div class="content-box">
+                          <h3>Sobre o Autor</h3>
+                          <h6>Visit Blog Page: <a href="blog-details.html">http://my.blog.com</a></h6>
+                          <p>Denouncing pleasure and praising pain was born and I will give complete all account of the system & expound.</p>
+                          <ul class="social-links clearfix">
+                              <li><a href="blog-details.html"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="blog-details.html"><i class="fab fa-twitter"></i></a></li>
+                              <li><a href="blog-details.html"><i class="fab fa-linkedin-in"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="nav-btn-box clearfix">
+                      <div class="single-item text-left pull-left">
+                          <figure class="thumb-box"><img src="assets/images/gallery/btn-1.jpg" alt=""></figure>
+                          <h5><a href="blog-details.html">Aid for Country: <br />The Charity for Orphans</a></h5>
+                          <span>03.03.2021</span>
+                      </div>
+                      <div class="single-item text-right pull-right">
+                          <figure class="thumb-box"><img src="assets/images/gallery/btn-2.jpg" alt=""></figure>
+                          <h5><a href="blog-details.html">I Want to Get <br />Every People Volunteer...</a></h5>
+                          <span>24.02.2021</span>
+                      </div>
+                  </div>
+                  <div class="comment-box">
+                      <div class="group-title">
+                          <h3>Comments (02)</h3>
+                      </div>
+                      <div class="comment">
+                          <figure class="thumb-box">
+                              <img src="assets/images/news/comment-1.jpg" alt="">
+                          </figure>
+                          <div class="comment-inner">
+                              <div class="comment-info clearfix">
+                                  <h3>Isaac Herman</h3>
+                                  <span class="post-date">05.03.2021 [11.00am]</span>
+                              </div>
+                              <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                              <a href="blog-details.html" class="reply-btn"><i class="icon-reply"></i>Reply</a>
+                          </div>
+                      </div>
+                      <div class="comment replay-comment">
+                          <figure class="thumb-box">
+                              <img src="assets/images/news/comment-2.jpg" alt="">
+                          </figure>
+                          <div class="comment-inner">
+                              <div class="comment-info clearfix">
+                                  <h3>William Cobus</h3>
+                                  <span class="post-date">04.03.2021 [10.00am]</span>
+                              </div>
+                              <p>Undertakes laborious physical exercise, except to obtain some advantage from it but who has any right to find fault.</p>
+                              <a href="blog-details.html" class="reply-btn"><i class="icon-reply"></i>Reply</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="comments-form-area">
+                      <div class="group-title">
+                          <h3>Leave a Reply</h3>
+                          <p>Your email address will not be published. Required fields are marked *</p>
+                      </div>
+                      <div class="form-inner">
+                          <form method="post" action="blog-details.html" class="comment-form"> 
+                              <div class="row clearfix">
+                                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                      <textarea name="message" placeholder="Your Comment *"></textarea>
+                                  </div>
+                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                      <input type="text" name="name" placeholder="Your Name *" required="">
+                                  </div>
+                                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                      <input type="email" name="email" placeholder="Email *" required="">
+                                  </div>
+                                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                      <div class="form-group">
+                                          <label class="custom-control material-checkbox">
+                                              <input type="checkbox" class="material-control-input">
+                                              <span class="material-control-indicator"></span>
+                                              <span class="description">Save my name, email & website in this browser for the next time I comment.</span>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                      <button type="submit" class="theme-btn btn-one">Submit</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+              <div class="blog-sidebar default-sidebar">
+                  <div class="sidebar-widget search-widget">
+                      <form action="blog-details.html" method="post" class="search-form">
+                          <div class="form-group">
+                              <input type="search" name="search-field" placeholder="Palavra-chave . . ." required="">
+                              <button type="submit"><i class="icon-search"></i></button>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="sidebar-widget category-widget">
+                      <div class="widget-title">
+                          <h3>Categorias</h3>
+                      </div>
+                      <div class="widget-content">
+                          <ul class="category-list clearfix">
+                              <li><a href="blog-details.html">CONTRIBUTIONS<span>06</span></a></li>
+                              <li><a href="blog-details.html">Environment<span>08</span></a></li>
+                              <li><a href="blog-details.html">Heath & Food<span>03</span></a></li>
+                              <li><a href="blog-details.html">Treatment<span>14</span></a></li>
+                              <li><a href="blog-details.html">National Day<span>12</span></a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sidebar-widget post-widget">
+                      <div class="widget-title">
+                          <h3>Popular Post</h3>
+                      </div>
+                      <div class="post-inner">
+                          <div class="post">
+                              <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-4.jpg" alt=""></a></figure>
+                              <h5><a href="blog-details.html">Aid for Country: The Charity for Orphans</a></h5>
+                              <span class="post-date">03.03.2021</span>
+                          </div>
+                          <div class="post">
+                              <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-5.jpg" alt=""></a></figure>
+                              <h5><a href="blog-details.html">I Want to Get Every People Volunteer...</a></h5>
+                              <span class="post-date">24.02.2021</span>
+                          </div>
+                          <div class="post">
+                              <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-6.jpg" alt=""></a></figure>
+                              <h5><a href="blog-details.html">The Last Day of World Hunger Month</a></h5>
+                              <span class="post-date">08.01.2021</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="sidebar-widget tags-widget">
+                      <div class="widget-title">
+                          <h3>Tag Cloud</h3>
+                      </div>
+                      <div class="widget-content">
+                          <ul class="tags-list clearfix">
+                              <li><a href="blog-details.html">activities</a></li>
+                              <li><a href="blog-details.html">awareness</a></li>
+                              <li><a href="blog-details.html">benefits</a></li>
+                              <li><a href="blog-details.html">education</a></li>
+                              <li><a href="blog-details.html">environment</a></li>
+                              <li><a href="blog-details.html">gift card</a></li>
+                              <li><a href="blog-details.html">heath</a></li>
+                              <li><a href="blog-details.html">protection</a></li>
+                              <li><a href="blog-details.html">women care</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sidebar-widget gallery-widget">
+                      <div class="widget-title">
+                          <h3>Gallery</h3>
+                      </div>
+                      <div class="widget-content">
+                          <ul class="image-list clearfix">
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-1.jpg" alt="">
+                                      <a href="assets/images/case/gallery-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-2.jpg" alt="">
+                                      <a href="assets/images/case/gallery-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-3.jpg" alt="">
+                                      <a href="assets/images/case/gallery-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-4.jpg" alt="">
+                                      <a href="assets/images/case/gallery-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-5.jpg" alt="">
+                                      <a href="assets/images/case/gallery-5.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                              <li>
+                                  <figure class="image">
+                                      <img src="assets/images/case/gallery-6.jpg" alt="">
+                                      <a href="assets/images/case/gallery-6.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fas fa-expand-alt"></i></a>
+                                  </figure>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sidebar-widget subscribe-widget centred">
+                      <div class="widget-content">
+                          <div class="upper-content" style="background-image: url(assets/images/case/case-30.jpg);">
+                              <div class="icon-box"><i class="icon-email-open-sketched-envelope"></i></div>
+                              <h3>Subscribe Us</h3>
+                              <p>Subscribe us and get latest news and upcoming events.</p>
+                          </div>
+                          <div class="lower-content">
+                              <form action="contact.html" method="post" class="subscribe-form">
+                                  <div class="form-group">
+                                      <input type="email" name="email" placeholder="Enter email address" required="">
+                                      <button type="submit" class="theme-btn btn-one">Subscribe</button>
+                                  </div>
+                              </form>
+                              <p><span>*</span>Never share your email with others.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- sidebar-page-container end -->
+
+
+      <!-- donate popup -->
+      <div id="donate-popup" class="donate-popup">
+        <div class="close-donate"><i class="icon-close"></i></div>
+        <div class="popup-inner">
+            <div class="donate-content">
+                <div class="sec-title centred">
+                    <span class="top-text">Make Your Donation</span>
+                    <h2>Creating a Brighter Tomorrow</h2>
+                </div>
+                <form action="index.html" method="post" class="default-form">
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-12 col-sm-12 donate-column">
+                            <div class="donate-box">
+                                <div class="donate-option">
+                                    <h3>How Much?</h3>
+                                    <ul class="donate-list clearfix">
+                                        <li>
+                                            <input type="radio" id="donate-amount-1" name="donate-amount" checked="checked" />
+                                            <label for="donate-amount-1" data-amount="1000" >$10</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="donate-amount-2" name="donate-amount" />
+                                            <label for="donate-amount-2" data-amount="2000">$20</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="donate-amount-3" name="donate-amount" />
+                                            <label for="donate-amount-3" data-amount="3000">$50</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="donate-amount-4" name="donate-amount" />
+                                            <label for="donate-amount-4" data-amount="4000">$100</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="donate-amount-5" name="donate-amount" />
+                                            <label for="donate-amount-5" data-amount="5000">$500</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="donate-amount-6" name="donate-amount" />
+                                            <label for="donate-amount-6" data-amount="5000">$1000</label>
+                                        </li>
+                                    </ul>
+                                    <div class="other-amount">
+                                        <div class="text">
+                                            <h4>Like to Donate</h4>
+                                            <p>Enter your custom amount</p>
+                                        </div>
+                                        <div class="amount-box">
+                                            <div class="item-quantity"><input class="quantity-spinner" type="text" value="750" name="quantity"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-option">
+                                    <h3>Choose Payment Option</h3>
+                                    <ul class="payment-list clearfix">
+                                        <li>
+                                            <input type="radio" id="payment-method-1" name="payment-method" checked="checked" />
+                                            <label for="payment-method-1" >Net Banking</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="payment-method-2" name="payment-method" />
+                                            <label for="payment-method-2">Credit - Debit Card</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="payment-method-3" name="payment-method" />
+                                            <label for="payment-method-3">Offline Payment</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 donate-form">
+                            <div class="form-inner">
+                                <h3>Donar Information</h3>
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                                        <div class="form-group">
+                                            <label>Your Name <span>*</span></label>
+                                            <input type="text" name="name" placeholder="example name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                                        <div class="form-group">
+                                            <label>Email Address <span>*</span></label>
+                                            <input type="email" name="email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                                        <div class="form-group">
+                                            <label>Phone</label>
+                                            <input type="text" name="phone" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <input type="text" name="address" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 column">
+                                        <div class="form-group message-btn">
+                                            <button type="submit" class="theme-btn btn-one">Donate Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 column">
+                                        <div class="form-group">
+                                            <label class="custom-control material-checkbox">
+                                                <input type="checkbox" class="material-control-input">
+                                                <span class="material-control-indicator"></span>
+                                                <span class="description">I would like to donate automatically repeat each month</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- donate popup -->
+
+
+    <!-- sidebar cart item -->
+    <div class="xs-sidebar-group info-group info-sidebar">
+        <div class="xs-overlay xs-bg-black"></div>
+        <div class="xs-sidebar-widget">
+            <div class="sidebar-widget-container">
+                <div class="widget-heading">
+                    <a href="index-2.html" class="close-side-widget"><i class="icon-close"></i></a>
+                </div>
+                <div class="sidebar-textwidget">
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+                        </div>
+                        <div class="content-box">
+                            <h4>About Us</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam laboris.</p>
+                        </div>
+                        <div class="form-inner">
+                            <h4>Get a free quote</h4>
+                            <form action="index.html" method="post">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message..."></textarea>
+                                </div>
+                                <div class="form-group message-btn">
+                                    <button class="theme-btn btn-one">Submit Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar widget item end -->
+
+    
 {% endblock conteudo %}

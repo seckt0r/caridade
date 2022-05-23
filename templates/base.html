@@ -46,23 +46,8 @@
                   <div class="animation-preloader">
                       <div class="spinner"></div>
                       <div class="txt-loading">
-                          <span data-text-preloader="P" class="letters-loading">
-                              P
-                          </span>
-                          <span data-text-preloader="u" class="letters-loading">
-                              u
-                          </span>
-                          <span data-text-preloader="r" class="letters-loading">
-                              r
-                          </span>
-                          <span data-text-preloader="e" class="letters-loading">
-                              e
-                          </span>
-                          <span data-text-preloader="H" class="letters-loading">
-                              H
-                          </span>
-                          <span data-text-preloader="e" class="letters-loading">
-                              e
+                          <span data-text-preloader="C" class="letters-loading">
+                              C
                           </span>
                           <span data-text-preloader="a" class="letters-loading">
                               a
@@ -70,11 +55,20 @@
                           <span data-text-preloader="r" class="letters-loading">
                               r
                           </span>
-                          <span data-text-preloader="t" class="letters-loading">
-                              t
+                          <span data-text-preloader="i" class="letters-loading">
+                              i
                           </span>
-                          <span data-text-preloader="s" class="letters-loading">
-                              s
+                          <span data-text-preloader="d" class="letters-loading">
+                              d
+                          </span>
+                          <span data-text-preloader="a" class="letters-loading">
+                              a
+                          </span>
+                          <span data-text-preloader="d" class="letters-loading">
+                              d
+                          </span>
+                          <span data-text-preloader="e" class="letters-loading">
+                              e
                           </span>
                       </div>
                   </div>  
@@ -88,7 +82,7 @@
       <header class="main-header header-style-one">
           <!-- logo-box -->
           <div class="logo-box">
-              <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+              <div class="shape" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
               <figure class="logo"><a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a></figure>
           </div>
           <!-- header-top -->
@@ -99,20 +93,20 @@
                           <ul class="info-list clearfix">
                               <li>
                                   <i class="icon-chat"></i>
-                                  <span>Helpline:</span>
-                                  <a href="tel:23345678901">+233 456 789 01</a>
+                                  <span>Linha de ajuda:</span>
+                                  <a href="tel:244999333444">+244 999 333 444</a>
                               </li>
                               <li>
-                                  <a href="mailto:example@info.com">example@info.com</a>
+                                  <a href="mailto:exemplo@caridade.ao">exemplo@caridade.ao</a>
                               </li>
                               <li>
-                                  54 Berrick St Boston MA 02115. 
+                                  Endereço do escritório principal.
                               </li>
                           </ul>
                       </div>
                       <div class="right-column pull-right">
                           <div class="update-news">
-                              <p><i class="icon-megaphone"></i><span>Updates:</span> Delivers Personal Protective Equipments to North Macedonia . . .</p>
+                              <p><i class="icon-megaphone"></i><span>Atualizações:</span> As últimas atualizações ficarão aqui. . . .</p>
                           </div>
                           <div class="language-box">
                               <span>En</span>
@@ -128,7 +122,7 @@
               </div>
               <!-- donate-btn -->
               <div class="donate-btn">
-                  <button class="donate-box-btn theme-btn btn-one">Donate Now</button>
+                  <button class="donate-box-btn theme-btn btn-one">Doe agora</button>
               </div>
           </div>
           <!-- header-lower -->
@@ -137,7 +131,7 @@
                   <div class="outer-box">
                       <div class="text">
                           <figure class="icon-box"><img src="{% static 'images/icons/heart-1.png' %}" alt=""></figure>
-                          <span>Become a Volunteer</span>
+                          <span>Torne-se um Voluntário</span>
                       </div>
                       <div class="menu-area clearfix">
                           <!--Mobile Navigation Toggler-->
@@ -149,70 +143,34 @@
                           <nav class="main-menu navbar-expand-md navbar-light">
                               <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                   <ul class="navigation clearfix">
-                                      <li class="current dropdown"><a href="#">Home</a>
-                                          <ul>
-                                              <li><a href="index.html">Home Page 01</a></li>
-                                              <li><a href="index-2.html">Home Page 02</a></li>
-                                              <li><a href="index-onepage.html">OnePage Home</a></li>
-                                              <li><a href="index-rtl.html">RTL Home</a></li>
-                                              <li class="dropdown"><a href="index.html">Header Style</a>
-                                                  <ul>
-                                                      <li><a href="index.html">Header Style 01</a></li>
-                                                      <li><a href="index-2.html">Header Style 02</a></li>
-                                                  </ul>
-                                              </li>
-                                          </ul>
+                                      <li class="current dropdown"><a href="/">Início</a>                                        
                                       </li>
-                                      <li class="dropdown"><a href="index.html">Pages</a>
+                                      <li class="dropdown"><a href="#">Áreas</a>
                                           <ul>
-                                              <li><a href="about.html">About Charity</a></li>
-                                              <li><a href="volunteer.html">Become a Volunteer</a></li>
+                                              <li><a href="about.html">Sobre Caridade</a></li>
+                                              <li><a href="volunteer.html">Torne-se um Voluntário</a></li>
                                               <li><a href="comingsoon.html">Coming Soon</a></li>
                                               <li><a href="donate-page.html">Donate Us</a></li>
                                               <li><a href="faq.html">FAQ’s</a></li>
-                                              <li><a href="error.html">404</a></li>
-                                              <li class="dropdown"><a href="index.html">Portfolio</a>
-                                                  <ul>
-                                                      <li><a href="portfolio.html">2 Columns Grid</a></li>
-                                                      <li><a href="portfolio-2.html">3 Columns Grid</a></li>
-                                                      <li><a href="portfolio-3.html">4 Columns Grid</a></li>
-                                                      <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                                  </ul>
-                                              </li>
+                                              <li><a href="error.html">404</a></li>                                              
                                           </ul>
                                       </li> 
-                                      <li class="dropdown"><a href="index.html">Donations</a>
-                                          <ul>
-                                              <li><a href="donations.html">2 Columns Grid</a></li>
-                                              <li><a href="donations-2.html">3 Columns Grid</a></li>
-                                              <li><a href="donations-3.html">List View</a></li>
-                                              <li><a href="donation-details.html">Donation Details</a></li>
-                                          </ul>
+                                      <li class="dropdown"><a href="index.html">Doações</a>
                                       </li> 
-                                      <li class="dropdown"><a href="index.html">Events</a>
-                                          <ul>
-                                              <li><a href="events.html">Grid View</a></li>
-                                              <li><a href="events-2.html">List View</a></li>
-                                              <li><a href="event-details.html">Detail Page</a></li>
-                                          </ul>
+                                      <li class="dropdown"><a href="index.html">Eventos</a>                                          
                                       </li> 
-                                      <li class="dropdown"><a href="index.html">Blog</a>
-                                          <ul>
-                                              <li><a href="blog.html">Grid View</a></li>
-                                              <li><a href="blog-2.html">List View</a></li>
-                                              <li><a href="blog-details.html">Single Post</a></li>
-                                          </ul>
+                                      <li class="dropdown"><a href="{% url 'blog:blog_list' %}">Blog</a>                                        
                                       </li> 
-                                      <li class="dropdown"><a href="index.html">Shop</a>
+                                      <li class="dropdown"><a href="index.html">Loja</a>
                                           <ul>
-                                              <li><a href="products.html">Our Products</a></li>
+                                              <li><a href="products.html">Nossos Produtos</a></li>
                                               <li><a href="product-details.html">Product Details</a></li>
                                               <li><a href="cart.html">Shopping Cart</a></li>
                                               <li><a href="checkout.html">Checkout</a></li>
                                               <li><a href="account.html">My Account</a></li>
                                           </ul>
                                       </li>   
-                                      <li><a href="contact.html">Contact</a></li> 
+                                      <li><a href="contact.html">Contacto</a></li> 
                                   </ul>
                               </div>
                           </nav>
@@ -334,11 +292,11 @@
               <div class="inner-box clearfix">
                   <div class="left-column pull-left">
                       <div class="logo-box">
-                          <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+                          <div class="shape" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
                           <figure class="logo"><a href="index.html"><img src="{% static 'images/logo-3.png' %}" alt=""></a></figure>
                       </div>
                       <div class="text">
-                          <h3><i class="icon-email-open-sketched-envelope"></i>Subscribe <br />Our Newsletter</h3>
+                          <h3><i class="icon-email-open-sketched-envelope"></i>Subscreva <br />Nossa Newsletter</h3>
                       </div>
                   </div>
                   <div class="right-column pull-right clearfix">
@@ -346,7 +304,7 @@
                           <form action="contact.html" method="post" class="subscribe-form">
                               <div class="form-group">
                                   <input type="email" name="email" placeholder="Your Email Address..." required="">
-                                  <button type="submit">Subscribe Us</button>
+                                  <button type="submit">Subscreva-nos</button>
                               </div>
                           </form>
                       </div>
@@ -371,28 +329,28 @@
                           <div class="footer-widget about-widget">
                               <div class="title-box">
                                   <div class="icon-box"><i class="icon-hand"></i></div>
-                                  <span>Charity of Choice</span>
-                                  <h3>Partner With Us</h3>
+                                  <span>Sua Escolha em Caridade</span>
+                                  <h3>Colabore Connosco With Us</h3>
                               </div>
                               <div class="text">
                                   <p>Prevents our being able to do we like best, every pleasures is every pain avoided.</p>
-                                  <a href="index.html" class="theme-btn btn-one">Join With Us</a>
+                                  <a href="index.html" class="theme-btn btn-one">Junte-se a Nós</a>
                               </div>
                           </div>
                       </div>
                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                           <div class="footer-widget links-widget ml-30">
                               <div class="widget-title">
-                                  <h3>Our Charity</h3>
+                                  <h3>Nossa Caridade</h3>
                               </div>
                               <div class="widget-content">
                                   <ul class="links-list clearfix">
-                                      <li><a href="about.html">About Charity</a></li>
-                                      <li><a href="volunteer.html">Meet Our Volunteers</a></li>
-                                      <li><a href="events.html">Upcoming  Events</a></li>
-                                      <li><a href="blog.html">Blog & Articles</a></li>
-                                      <li><a href="donations.html">Our Causes</a></li>
-                                      <li><a href="contact.html">Get Touch With Us</a></li>
+                                      <li><a href="about.html">Sobre Caridade</a></li>
+                                      <li><a href="volunteer.html">Conheça Nossos Voluntários</a></li>
+                                      <li><a href="events.html">Próximos Eventos</a></li>
+                                      <li><a href="blog.html">Blog e Artigos</a></li>
+                                      <li><a href="donations.html">Nossas Causas</a></li>
+                                      <li><a href="contact.html">Entre Em Contacto Connosco</a></li>
                                   </ul>
                               </div>
                           </div>
@@ -400,16 +358,16 @@
                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                           <div class="footer-widget links-widget ml-30">
                               <div class="widget-title">
-                                  <h3>For Donars</h3>
+                                  <h3>Para Doadores</h3>
                               </div>
                               <div class="widget-content">
                                   <ul class="links-list clearfix">
-                                      <li><a href="index.html">Donate</a></li>
+                                      <li><a href="index.html">Doe</a></li>
                                       <li><a href="index.html">Donate Securities</a></li>
-                                      <li><a href="index.html">Fundraise</a></li>
+                                      <li><a href="index.html">Contribuições</a></li>
                                       <li><a href="index.html">Crisis Relief Centre</a></li>
                                       <li><a href="index.html">Round Up to Give</a></li>
-                                      <li><a href="index.html">Refer a Friend</a></li>
+                                      <li><a href="index.html">Indique um Amigo</a></li>
                                   </ul>
                               </div>
                           </div>
@@ -423,12 +381,12 @@
                               </div>
                               <div class="widget-content">
                                   <div class="single-item">
-                                      <h3><a href="tel:23345678901">(+233) 456-789-01</a></h3>
-                                      <p><a href="mailto:example@info.com">example@info.com</a></p>
+                                      <h3><a href="tel:23345678901">(+244) 999-333-444</a></h3>
+                                      <p><a href="mailto:exemplo@caridade.ao">exemplo@caridade.ao</a></p>
                                   </div>
                                   <div class="single-item">
-                                      <h5>Charity Shop</h5>
-                                      <p>5404 Berrick Street, 2nd cross, Boston, MA 02115.</p>
+                                      <h5>Nosso Escritório</h5>
+                                      <p>Endereço completo do escritório principal.</p>
                                   </div>
                               </div>
                           </div>
@@ -440,10 +398,10 @@
               <div class="auto-container">
                   <div class="inner-box clearfix">
                       <div class="copyright pull-left">
-                          <p>&copy; 2022 <a href="index.html">Pure Hearts,</a> All Rights Reserved.</p>
+                          <p>&copy; 2022 <a href="index.html">Caridade,</a> Todos os Direitos Reservados.</p>
                       </div>
                       <ul class="footer-card pull-right clearfix">
-                          <li><span>Ways to Donate:</span></li>
+                          <li><span>Formas de Doar:</span></li>
                           <li><a href="index.html"><img src="assets/images/resource/card-1.png" alt=""></a></li>
                           <li><a href="index.html"><img src="assets/images/resource/card-2.png" alt=""></a></li>
                           <li><a href="index.html"><img src="assets/images/resource/card-3.png" alt=""></a></li>
@@ -592,7 +550,7 @@
                   <div class="sidebar-info-contents">
                       <div class="content-inner">
                           <div class="logo">
-                              <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+                              <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="" /></a>
                           </div>
                           <div class="content-box">
                               <h4>About Us</h4>
