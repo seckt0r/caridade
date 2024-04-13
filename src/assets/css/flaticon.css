@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?jofyi7');
+  src:  url('../fonts/icomoon.eot?jofyi7#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jofyi7') format('truetype'),
+    url('../fonts/icomoon.woff?jofyi7') format('woff'),
+    url('../fonts/icomoon.svg?jofyi7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+  content: "\e900";
+}
+.icon-megaphone:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e902";
+}
+.icon-shopping-bag:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+.icon-right-arrow:before {
+  content: "\e905";
+}
+.icon-childrens-book:before {
+  content: "\e906";
+}
+.icon-first-aid-kit:before {
+  content: "\e907";
+}
+.icon-save:before {
+  content: "\e908";
+}
+.icon-donation:before {
+  content: "\e909";
+}
+.icon-charity:before {
+  content: "\e90a";
+}
+.icon-donation-1:before {
+  content: "\e90b";
+}
+.icon-tax-free:before {
+  content: "\e90c";
+}
+.icon-gift:before {
+  content: "\e90d";
+}
+.icon-animal:before {
+  content: "\e90e";
+}
+.icon-stop-hand-drawn-signal-rhomb:before {
+  content: "\e90f";
+}
+.icon-puzzle-piece-shape-handmade-draw:before {
+  content: "\e910";
+}
+.icon-financial-bar-chart:before {
+  content: "\e911";
+}
+.icon-house-with-heart-hand-drawn-building:before {
+  content: "\e912";
+}
+.icon-play-arrow:before {
+  content: "\e913";
+}
+.icon-email-open-sketched-envelope:before {
+  content: "\e914";
+}
+.icon-hand:before {
+  content: "\e915";
+}
+.icon-donation-2:before {
+  content: "\e916";
+}
+.icon-phone-call:before {
+  content: "\e917";
+}
+.icon-letter:before {
+  content: "\e918";
+}
+.icon-loving:before {
+  content: "\e919";
+}
+.icon-helping-hand:before {
+  content: "\e91a";
+}
+.icon-home:before {
+  content: "\e91b";
+}
+.icon-location:before {
+  content: "\e91c";
+}
+.icon-mission:before {
+  content: "\e91d";
+}
+.icon-medical-report:before {
+  content: "\e91e";
+}
+.icon-goal:before {
+  content: "\e91f";
+}
+.icon-fair-trade:before {
+  content: "\e920";
+}
+.icon-statue-of-liberty:before {
+  content: "\e921";
+}
+.icon-london-eye:before {
+  content: "\e922";
+}
+.icon-kangaroo:before {
+  content: "\e923";
+}
+.icon-taj-mahal:before {
+  content: "\e924";
+}
+.icon-tick-inside-circle:before {
+  content: "\e925";
+}
+.icon-search-1:before {
+  content: "\e926";
+}
+.icon-question:before {
+  content: "\e927";
+}
+.icon-mall:before {
+  content: "\e928";
+}
+.icon-donation-3:before {
+  content: "\e929";
+}
+.icon-location-pointer:before {
+  content: "\e92a";
+}
+.icon-reply:before {
+  content: "\e92b";
+}
+.icon-heart-shape-outline:before {
+  content: "\e92c";
+}
+.icon-close:before {
+  content: "\e92d";
+}
+.icon-chatting:before {
+  content: "\e92e";
+}
+.icon-loyalty:before {
+  content: "\e92f";
+}
